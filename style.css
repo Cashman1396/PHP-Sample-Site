@@ -1,0 +1,22 @@
+/*
+Theme Name: First Theme
+Theme URI: https://myawesometheme.awesome
+Author: Chris Ashman
+Author URI: https://danielpataki.com
+Description: The theme for my awesome site
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Themes
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+    background-color: darkcyan;
+    
+}
+
+a:hover {
+    color:yellow;
+}
