@@ -1,14 +1,27 @@
-<?php get_header() ?>
+<?php include_once ('functions.php') ?>
+<?php include ('post-data.php') ?>
+<?php include ('header.php') ?>
 
-<?php if( have_posts() ) : ?>
-	<?php while( have_posts() ) : the_post() ?>
-		<h2><a href='<?php the_permalink() ?>'><?php the_title() ?></a></h2>
-		<div class="content">
-			<?php the_content() ?>
-		</div>
-	<?php endwhile ?>
-<?php else : ?>
-	<p>Oh No, there are no posts!</p>
-<?php endif ?>
+
+    <div id="main">
+
+<?php foreach( $posts as$id => $post ) : ?>
+        <section id="intro">
+            <header class="major">
+                <h2><?php echo $post['title'] ?></h2>
+            </header>
+        <p>
+        <?php echo get_excerpt( $post['content'] )  ?>
+        <p>
+            <ul>
+                <li>
+                    <a href="post.php?post_id=<?php echo $id ?>" class="button">Click Here</a>
+                </li>
+             </ul>
+    </section>
+
+    <?php endforeach ?>
+
+</div> 
     
-<?php get_footer() ?>
+<?php include ('footer.php') ?>
